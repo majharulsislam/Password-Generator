@@ -1,0 +1,26 @@
+$( function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: 46,
+      min: 1,
+      max: 100,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+  } );
+
+// for mobile
+$( function() {
+    $( "#slider-range-mobile" ).slider({
+      range: "min",
+      value: 26,
+      min: 1,
+      max: 100,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range-mobile" ).slider( "value" ) );
+  } );
